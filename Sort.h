@@ -19,10 +19,10 @@ public:
     void run();
     void draw();
     void init();
-    void sort(); // some sorting algorithm;
+    void bubbleSort();
+    void insertionSort();
+    void selectionSort();
     void display();
-
-
 };
 
 

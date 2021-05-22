@@ -7,7 +7,6 @@
 #include <iostream>
 
 void Sort::run(){
-
     init();
 
     while (sWindow.isOpen())
@@ -19,9 +18,22 @@ void Sort::run(){
                 sWindow.close();
         }
 
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
+            init();
+        }
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+            bubbleSort();
+        }
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)){
+            insertionSort();
+        }
+
         sWindow.clear();
         draw();
-        sort();
+        sWindow.display();
+
     }
 }
 
@@ -31,12 +43,11 @@ void Sort::draw() {
     }
 }
 
-
 void Sort::init() {
+
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution distrib(1, 510);
-
+    std::uniform_int_distribution distrib(1, 530);
 
     int x = 0;
     int y = 530;
@@ -52,8 +63,7 @@ void Sort::init() {
 
 }
 
-void Sort::sort() {
-
+void Sort::bubbleSort() {
     for(int j = 0; j < arr.size(); j++){
         for(int i = 0; i < arr.size() -1; i++){
             if(arr[i].num > arr[i+1].num){
@@ -62,7 +72,6 @@ void Sort::sort() {
                 Number temp(arr[i]);
                 arr[i].num = arr[i+1].num;
                 arr[i].rect.setSize(sf::Vector2f(10, arr[i+1].rect.getSize().y));
-
 
                 arr[i+1].num = temp.num;
                 arr[i+1].rect.setSize(sf::Vector2f(10, temp.rect.getSize().y));
@@ -75,6 +84,32 @@ void Sort::sort() {
         }
 
     }
+
+}
+
+void Sort::insertionSort() {
+    int i;
+    for(int j = 1; j < arr.size(); j++){
+        Number key = arr[j];
+        i = j-1;
+        while(i >= 0 && arr[i].num > key.num){
+            sWindow.clear();
+            arr[i+1].num = arr[i].num;
+            arr[i+1].rect.setSize(sf::Vector2f(10, arr[i].rect.getSize().y));
+            draw();
+
+
+            i = i -1;
+        }
+        sWindow.clear();
+        arr[i+1].num = key.num;
+        arr[i+1].rect.setSize(sf::Vector2f(10, key.rect.getSize().y));
+        draw();
+        sWindow.display();
+    }
+}
+
+void Sort::selectionSort() {
 
 }
 
