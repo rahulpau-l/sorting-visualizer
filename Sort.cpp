@@ -5,6 +5,7 @@
 #include "Sort.h"
 #include <random>
 #include <iostream>
+#include <chrono>
 
 void Sort::run(){
     init();
@@ -45,15 +46,15 @@ void Sort::draw() {
 
 void Sort::init() {
 
-    std::random_device rd;
-    std::mt19937 gen(rd());
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::default_random_engine generator(seed);
     std::uniform_int_distribution distrib(1, 530);
 
     int x = 0;
     int y = 530;
 
     for(auto &it : arr) {
-        int num = distrib(gen);
+        int num = distrib(generator);
         it.setNum(num);
         it.setSize(sf::Vector2f(10, -1 * num));
         it.rect.setPosition(x, y);
@@ -76,15 +77,11 @@ void Sort::bubbleSort() {
                 arr[i+1].num = temp.num;
                 arr[i+1].rect.setSize(sf::Vector2f(10, temp.rect.getSize().y));
 
-
                 draw();
                 sWindow.display();
             }
-
         }
-
     }
-
 }
 
 void Sort::insertionSort() {
@@ -109,9 +106,7 @@ void Sort::insertionSort() {
     }
 }
 
-void Sort::selectionSort() {
 
-}
 
 void Sort::display() {
     for(auto &n: arr){

@@ -21,7 +21,7 @@ public:
     void init();
     void bubbleSort();
     void insertionSort();
-    void selectionSort();
+    void quickSort();
     void display();
 };
 

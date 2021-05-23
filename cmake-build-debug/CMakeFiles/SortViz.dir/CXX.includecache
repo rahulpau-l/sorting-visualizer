@@ -676,6 +676,10 @@ SFML/Config.hpp
 
 C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+C:/Users/Rahul/Desktop/SortViz/Number.cpp
+Number.h
+C:/Users/Rahul/Desktop/SortViz/Number.h
+
 C:/Users/Rahul/Desktop/SortViz/Number.h
 SFML/Graphics.hpp
 -
@@ -687,10 +691,18 @@ random
 -
 iostream
 -
+chrono
+-
 
 C:/Users/Rahul/Desktop/SortViz/Sort.h
 vector
 -
 Number.h
 C:/Users/Rahul/Desktop/SortViz/Number.h
+
+C:/Users/Rahul/Desktop/SortViz/main.cpp
+iostream
+-
+Sort.h
+C:/Users/Rahul/Desktop/SortViz/Sort.h
 
