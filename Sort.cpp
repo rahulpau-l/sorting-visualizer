@@ -17,25 +17,16 @@ void Sort::run(){
         {
             if (event.type == sf::Event::Closed)
                 sWindow.close();
+
         }
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
-            init();
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
-            bubbleSort();
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)){
-            insertionSort();
-        }
-
+        selectSort();
         sWindow.clear();
         draw();
         sWindow.display();
 
     }
+
 }
 
 void Sort::draw() {
@@ -48,10 +39,10 @@ void Sort::init() {
 
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
-    std::uniform_int_distribution distrib(1, 530);
+    std::uniform_int_distribution distrib(1, 535);
 
     int x = 0;
-    int y = 530;
+    int y = 540;
 
     for(auto &it : arr) {
         int num = distrib(generator);
@@ -60,8 +51,6 @@ void Sort::init() {
         it.rect.setPosition(x, y);
         x += 11;
     }
-
-
 }
 
 void Sort::bubbleSort() {
@@ -95,14 +84,69 @@ void Sort::insertionSort() {
             arr[i+1].rect.setSize(sf::Vector2f(10, arr[i].rect.getSize().y));
             draw();
 
-
-            i = i -1;
+            i = i - 1;
         }
         sWindow.clear();
         arr[i+1].num = key.num;
         arr[i+1].rect.setSize(sf::Vector2f(10, key.rect.getSize().y));
         draw();
         sWindow.display();
+    }
+}
+
+void Sort::selectionSort() {
+    for(int i = 0; i < arr.size() - 1; i++){
+        auto minIndex = i;
+        for(int j = i + 1; j < arr.size(); j++ ){
+            if(arr[j].num < arr[minIndex].num){
+                    minIndex = j;
+            }
+            sWindow.clear();
+            draw();
+        }
+
+        if(minIndex != i){
+            sWindow.clear();
+            Number temp(arr[i]);
+            arr[i].num = arr[minIndex].num;
+            arr[i].rect.setSize(sf::Vector2f(10, arr[minIndex].rect.getSize().y));
+
+            arr[minIndex].num = temp.num;
+            arr[minIndex].rect.setSize(sf::Vector2f(10, temp.rect.getSize().y));
+            draw();
+            sWindow.display();
+        }
+
+    }
+}
+
+void Sort::quickSort() {
+
+}
+
+void Sort::mergeSort() {
+
+}
+
+void Sort::selectSort() {
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
+        init();
+    }
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+        bubbleSort();
+    }
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)){
+        insertionSort();
+    }
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)){
+        selectionSort();
+    }
+
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)){
+        quickSort();
     }
 }
 

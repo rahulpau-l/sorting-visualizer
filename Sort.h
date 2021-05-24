@@ -14,14 +14,17 @@ class Sort {
 private:
     sf::RenderWindow sWindow{sf::VideoMode(WIDTH, HEIGHT), "Sort!"};
     std::vector<Number> arr{87};
-
 public:
     void run();
+private:
     void draw();
     void init();
     void bubbleSort();
     void insertionSort();
+    void selectionSort();
     void quickSort();
+    void mergeSort();
+    void selectSort();
     void display();
 };
 

@@ -19,9 +19,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sort.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sort.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sort.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sort.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/Sort.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/Sort.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SortViz.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/SortViz.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SortViz.exe" afterDir="false" />
     </list>
@@ -62,6 +60,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,7 +81,8 @@
       <workItem from="1621704754312" duration="2757000" />
       <workItem from="1621742898447" duration="2318000" />
       <workItem from="1621745252310" duration="1732000" />
-      <workItem from="1621747038539" duration="456000" />
+      <workItem from="1621747038539" duration="633000" />
+      <workItem from="1621795581623" duration="8717000" />
     </task>
     <servers />
   </component>
@@ -102,22 +106,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621571719318" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1621742760505">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1621813914720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621742760505" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1621742760505">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621813914720" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1621813914720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621742760505" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1621742760505">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621813914720" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1621813914719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621742760505" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1621742760505">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621813914719" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1621813914720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621742760505" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621813914720" />
     <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1621632088268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -138,9 +142,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="255" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621746372088" />
-    <state x="856" y="106" width="998" height="708" key="SettingsEditor" timestamp="1621746944114">
+    <state x="475" y="187" width="1445" height="708" key="SettingsEditor" timestamp="1621797260122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="856" y="106" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621746944114" />
+    <state x="475" y="187" width="1445" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621797260122" />
   </component>
 </project>
