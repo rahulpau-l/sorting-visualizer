@@ -16,7 +16,7 @@ void Number::setNum(int c) {
     num = c;
 }
 
-void Number::setSize(sf::Vector2<float> dimension)  {
+void Number::setSize(sf::Vector2<float> &&dimension)  {
     rect.setSize(dimension);
 }
 

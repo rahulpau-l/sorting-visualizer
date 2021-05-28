@@ -27,6 +27,9 @@ void Sort::run(){
 
     }
 
+    display();
+
+
 }
 
 void Sort::draw() {
@@ -120,13 +123,82 @@ void Sort::selectionSort() {
     }
 }
 
-void Sort::quickSort() {
-
+void Sort::quickSort(int left, int right) {
+    if(left < right){
+        int pivotIndex = partition(left, right);
+        quickSort(left, pivotIndex - 1);
+        quickSort(pivotIndex, right);
+    }
 }
 
-void Sort::mergeSort() {
+int Sort::partition(int left, int right){
+    int pivotIndex = left + (right - left) / 2;
+    Number pivotValue = arr[pivotIndex];
+    int i = left, j = right;
 
+
+
+    while(i <= j) {
+        sWindow.clear();
+        draw();
+        sWindow.display();
+
+        sWindow.clear();
+        draw();
+        sWindow.display();
+
+        sWindow.clear();
+        draw();
+        sWindow.display();
+
+        while(arr[i].num < pivotValue.num) {
+            sWindow.clear();
+            draw();
+            sWindow.display();
+            i++;
+            sWindow.clear();
+            draw();
+            sWindow.display();
+        }
+        while(arr[j].num > pivotValue.num) {
+            sWindow.clear();
+            draw();
+            sWindow.display();
+            j--;
+            sWindow.clear();
+            draw();
+            sWindow.display();
+        }
+        if(i <= j) {
+            sWindow.clear();
+            Number temp(arr[i]);
+            arr[i].num = arr[j].num;
+            arr[i].rect.setSize(sf::Vector2f(10, arr[j].rect.getSize().y));
+            draw();
+            sWindow.display();
+
+            sWindow.clear();
+            draw();
+            sWindow.display();
+
+            sWindow.clear();
+            arr[j].num = temp.num;
+            arr[j].rect.setSize(sf::Vector2f(10, temp.rect.getSize().y));
+            i++;
+            j--;
+            draw();
+            sWindow.display();
+
+        }
+        sWindow.clear();
+        draw();
+        sWindow.display();
+
+
+    }
+    return i;
 }
+
 
 void Sort::selectSort() {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)){
@@ -146,7 +218,7 @@ void Sort::selectSort() {
     }
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)){
-        quickSort();
+        quickSort(0, arr.size() - 1);
     }
 }
 

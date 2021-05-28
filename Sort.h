@@ -9,8 +9,8 @@
 #include "Number.h"
 
 class Sort {
-    const int WIDTH = 960;
-    const int HEIGHT = 540;
+    static constexpr int WIDTH = 960;
+    static constexpr int HEIGHT = 540;
 private:
     sf::RenderWindow sWindow{sf::VideoMode(WIDTH, HEIGHT), "Sort!"};
     std::vector<Number> arr{87};
@@ -22,8 +22,8 @@ private:
     void bubbleSort();
     void insertionSort();
     void selectionSort();
-    void quickSort();
-    void mergeSort();
+    void quickSort(int left, int right); // fix this
+    int partition(int left, int right); // fix this
     void selectSort();
     void display();
 };

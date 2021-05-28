@@ -14,7 +14,7 @@ public:
     Number();
     Number(const Number &n);
     void setNum(int c);
-    void setSize(sf::Vector2<float> dimension);
+    void setSize(sf::Vector2<float> &&dimension);
 };
 
 
