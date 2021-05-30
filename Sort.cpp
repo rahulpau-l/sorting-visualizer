@@ -26,10 +26,6 @@ void Sort::run(){
         sWindow.display();
 
     }
-
-    display();
-
-
 }
 
 void Sort::draw() {
@@ -40,7 +36,7 @@ void Sort::draw() {
 
 void Sort::init() {
 
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    unsigned int seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
     std::uniform_int_distribution distrib(1, 535);
 
@@ -136,8 +132,6 @@ int Sort::partition(int left, int right){
     Number pivotValue = arr[pivotIndex];
     int i = left, j = right;
 
-
-
     while(i <= j) {
         sWindow.clear();
         draw();
@@ -222,11 +216,10 @@ void Sort::selectSort() {
     }
 }
 
-
-
 void Sort::display() {
     for(auto &n: arr){
         std::cout << n.num << " ";
 
     }
 }
+

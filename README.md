@@ -1,6 +1,12 @@
 # Sorting Visualizer 
-This is a sorting visualizer made in c++ using sfml, so far it only does insertion and bubble sort might do other sorting algorithms in the future.
+This is a sorting visualizer made in c++ using sfml.
 
-## How to use it 
-Pressing 1 on the keyboard does bubble sort, pressing 2 does insertion sort and if you press 0 it resets and generates new
-unsorted rectangle.
+## How To Use It
+- Press **1** for bubble sort
+- Press **2** for insertion sort 
+- Press **3** for selection sort 
+- Press **4** for quick sort
+- Press **0** to randomize the rectangles
+
+##Demo
+[](images/Demo.gif)
