@@ -8,5 +8,5 @@ This is a sorting visualizer made in c++ using sfml.
 - Press **4** for quick sort
 - Press **0** to randomize the rectangles
 
-##Demo
+## Demo
 ![](images/Demo.gif)
