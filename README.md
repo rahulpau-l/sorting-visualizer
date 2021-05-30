@@ -9,4 +9,4 @@ This is a sorting visualizer made in c++ using sfml.
 - Press **0** to randomize the rectangles
 
 ##Demo
-[](images/Demo.gif)
+![](images/Demo.gif)
